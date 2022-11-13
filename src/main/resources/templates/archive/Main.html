@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MainPage</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {font-family: 'Open Sans', sans-serif;
+background: url("https://images.unsplash.com/photo-1525983360072-2ebda055ba40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHBldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/*Main Name*/
+
+.header {
+  padding: 80px;
+  text-align: center;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: white;
+}
+.header h1 {
+  font-size: 40px;
+}
+
+button {
+  background-color: rgba(0,0,0,0);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+  font-size: 24px;
+
+}
+
+button:hover {
+  opacity:1;
+}
+
+/*login form*/
+.loginbtn {
+  padding: 14px 20px;
+  background-color: rgba(0,0,0,0);
+  text-style: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+/*Login location*/
+.loginbtn, .signupbtn {
+  float: center;
+  width: 100%;
+}
+
+.container {
+  padding: 16px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 50%;
+  }
+}
+
+
+@keyframes hideSplashScreen {
+    from {
+        opacity: 1;
+    }to {
+        opacity:0;
+        visibility: hidden;
+    }
+}
+.splash-screen{
+    background-color: var(--yellow);
+    position: absolute;
+    height:100vh;
+    width:100vw;
+    top: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 132px;
+    animation: hideSplashScreen 0.4s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Get Abandoned Pet!</h1>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="clearfix">
+
+    <h1><button type="button" id="LogIn" class="loginbtn" ontransitionend="fade">Login</button>
+        <script>
+            document.getElementById("LogIn").onclick = function () {
+        location.href = "LogIn.html";
+        }
+            </script>
+    <button type="button" id="SignUp" class="signupbtn">Sign Up </button>
+        <script>
+            document.getElementById("SignUp").onclick = function () {
+        location.href = "SignUp.html";
+
+        }
+            </script>
+    </h1>
+</div>
+
+<div id="splash-screen">
+
+</div>
+
+</body>
+
+</html>

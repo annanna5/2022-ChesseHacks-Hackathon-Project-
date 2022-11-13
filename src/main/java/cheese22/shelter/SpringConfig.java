@@ -1,8 +1,7 @@
 package cheese22.shelter;
 
 import cheese22.shelter.repository.*;
-import cheese22.shelter.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
+import cheese22.shelter.service.DogService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,19 +11,17 @@ import javax.persistence.EntityManager;
 public class SpringConfig {
     private final EntityManager em;
 
-    @Autowired
     public SpringConfig(EntityManager em) {
         this.em = em;
-
     }
 
     @Bean
-    public MemberService memberService() {
-        return new MemberService(memberRepository());
+    public DogService dogService() {
+        return new DogService(dogRepository());
     }
 
     @Bean
-    public MemberRepository memberRepository() {
-        return new JpaMemberRepository(em);
+    public DogRepository dogRepository() {
+        return new DogRepository(em);
     }
 }

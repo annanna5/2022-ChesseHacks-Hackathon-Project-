@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +10,8 @@
         * {
             box-sizing: border-box;
         }
-        body {font-family: 'Open Sans', sans-serif;
-            background: url("https://img.freepik.com/free-vector/cute-pets-illustration_53876-112522.jpg?w=2000&t=st=1668321702~exp=1668322302~hmac=023b0fdff38b4bdc569ce43b39920cfaa97acb2ba934203430f52886df784822");
+        body {font-family: Arial, Helvetica, sans-serif;margin: 0;
+            background: url("../Images/jonas-vincent-xulIYVIbYIc-unsplash.jpg");
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -20,8 +21,8 @@
         .header {
             padding: 80px;
             text-align: center;
-
-            color: #e8854f;
+            text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+            color: white;
         }
         .header h1 {
             font-size: 40px;
@@ -29,7 +30,7 @@
 
         button {
             background-color: rgba(0,0,0,0);
-            color: #e8854f;
+            color: white;
             padding: 14px 20px;
             margin: 8px 0;
             border: none;
@@ -37,6 +38,7 @@
             width: 10%;
             opacity: 0.9;
             font-size: 24px;
+
         }
 
         button:hover {
@@ -52,7 +54,7 @@
 
         /*Login location*/
         .loginbtn, .signupbtn {
-            float: center;
+
             width: 100%;
         }
 
@@ -85,22 +87,8 @@
 <br>
 <br>
 <div class="clearfix">
-
-    <h1><a href="members/login"><button type="button" id="LogIn" class="loginbtn" ontransitionend="fade">Login</button></a>
-        <script>
-            document.getElementById("LogIn").onclick = function () {
-                location.href = "LogIn.html";
-            }
-        </script>
-        <a href="members/new">
-            <button type="button" id="SignUp" class="signupbtn">Sign Up </button>
-        </a>
-        <script>
-            document.getElementById("SignUp").onclick = function () {
-                location.href = "SignUp.html";
-
-            }
-        </script>
+    <h1><button type="button" onclick="parent.location='LogIn.html'" class="loginbtn">Login</button>
+        <button type="submit" onclick="parent.location='SignUp.html'" class="signupbtn">Sign Up</button>
     </h1>
 </div>
 

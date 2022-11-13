@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>name</th>
+                <th>sex</th>
+                <th>age</th>
+                <th>breed</th>
+                <th>weight</th>
+                <th>location</th>
+                <th>photo</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="dog : ${dogs}">
+                <td th:text="${dog.id}"></td>
+                <td th:text="${dog.name}"></td>
+                <td th:text="${dog.sex}"></td>
+                <td th:text="${dog.age}"></td>
+                <td th:text="${dog.breed}"></td>
+                <td th:text="${dog.weight}"></td>
+                <td th:text="${dog.location}"></td>
+                <td th:text="${dog.photo}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
